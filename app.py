@@ -17,6 +17,7 @@ def result(addr, dfro=None, dend=None):
 		dfro = datetime.now().strftime("%Y-%m-%d")
 		dend = (datetime.now()+ timedelta(days=1)).strftime("%Y-%m-%d")
 	query = "https://api.weatherbit.io/v2.0/history/daily?city="+addr+"&start_date="+dfro+"&end_date="+dend+"&key="+key
+
 	try:
 		r = requests.get(query)
 		data = json.loads(r.text)
@@ -44,11 +45,10 @@ def index():
 			context['max_temp'] = r['max_temp']
 			context['min_temp'] = r['min_temp']
 			context['pressure'] = r['pres']
+			context['datetime'] = r['datetime']
 
 			if request.args.get('btnSave') is not None:
-				if dend == '':
-					dend = None
-				record = Record(context['city'], context['temp'], context['max_temp'], context['min_temp'], context['pressure'], dend)
+				record = Record(context['city'], context['temp'], context['max_temp'], context['min_temp'], context['pressure'], context['datetime'])
 				db.session.add(record)
 				db.session.commit()
 			return render_template('/result.html', context=context)
