@@ -1,0 +1,58 @@
+https://history.openweathermap.org/data/2.5/history/city?id=1277333,&type=day&appid=c95de8409939f1674517b1a05e0b4978
+http://api.openweathermap.org/data/2.5/weather?q=Bangalore&appid=c95de8409939f1674517b1a05e0b4978
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+http://history.openweathermap.org/data/2.5/history/city?id=2885679&type=hour&appid=c95de8409939f1674517b1a05e0b4978
+
+
+
+
+
+
+
+
+
+
+052745e6bb184286a6102fcc2ca59f52 
+
+https://api.weatherbit.io/v2.0/current?city=Bangalore&key=052745e6bb184286a6102fcc2ca59f52
+
+https://api.weatherbit.io/v2.0/history/daily?city=Bangalore&start_date=2018-11-22&end_date=2018-11-23&key=052745e6bb184286a6102fcc2ca59f52
+
+
+
+
+[{'wind_cdir': 'ESE', 
+'rh': 100, 
+'pod': 'n', 
+'lon': 77.59369, 
+'pres': 914.1, 
+'timezone': 'Asia/Kolkata', 
+'ob_time': '2018-11-26 18:30', 
+'country_code': 'IN', 
+'clouds': 25, 'vis': 0.5, 'solar_rad': 0, 'state_code': '19', 'wind_spd': 2.6, 'lat': 12.97194, 'wind_cdir_full': 'east-southeast', 'slp': 1018, 'datetime': '2018-11-26:18', 'ts': 1543257000, 'station': 'VOBL', 'h_angle': -90, 'dewpt': 17, 'uv': 0, 'dni': 0, 'wind_dir': 110, 'elev_angle': -77.9541, 'ghi': 0, 'dhi': 0, 'precip': None, 'city_name': 'Bangalore', 
+
+
+
+'weather': {'icon': 'a05n', 'code': '741', 'description': 'Fog'}, 'sunset': '12:19', 'temp': 17, 'sunrise': '00:53', 'app_temp': 17}]
+
+
+
+
+{'data': [{'wind_cdir': 'ESE', 'rh': 100, 'pod': 'n', 'lon': 77.59369, 'pres': 914.1, 'timezone': 'Asia/Kolkata', 'ob_time': '2018-11-26 18:30', 'country_code': 'IN', 'clouds': 25, 'vis': 0.5, 'solar_rad': 0, 'state_code': '19', 'wind_spd': 2.6, 'lat': 12.97194, 'wind_cdir_full': 'east-southeast', 'slp': 1018, 'datetime': '2018-11-26:18', 'ts': 1543257000, 'station': 'VOBL', 'h_angle': -90, 'dewpt': 17, 'uv': 0, 'dni': 0, 'wind_dir': 110, 'elev_angle': -77.9541, 'ghi': 0, 'dhi': 0, 'precip': None, 'city_name': 'Bangalore', 'weather': {'icon': 'a05n', 'code': '741', 'description': 'Fog'}, 'sunset': '12:19', 'temp': 17, 'sunrise': '00:53', 'app_temp': 17}], 'count': 1}
+
+
+

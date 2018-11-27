@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %} Weather Report - Saved Temperatures {% endblock %} 
+
+{% block content %} 
+<h1>Saved Cities and Temperatures</h1>
+<table class="table table-striped">
+	<tr>
+		<td>City Name</td>
+		<td>Temperature</td>
+		<td>Minimum Temperature</td>
+		<td>Maximum Temperature</td>
+		<td>Pressure</td>
+		<td>Date Recorded</td>
+	</tr>
+	{% for i in records: %}
+	<tr>
+		<td>{{ i.city }}</td>
+		<td>{{ i.temp }}</td>
+		<td>{{ i.min_temp }}</td>
+		<td>{{ i.max_temp }}</td>
+		<td>{{ i.pressure }}</td>
+		<td>{{ i.record_date }}</td>
+	</tr>
+	{% endfor %}
+	</table>
+{% endblock %}

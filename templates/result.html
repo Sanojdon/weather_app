@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %} Weather Report - Temperature Result {% endblock %} 
+
+{% block content %} 
+<h1>Current Weather Update</h1>
+<table class="table table-striped">
+	<tr>
+		<td>City</td>
+		<td>{{context['city']}}</td>
+	</tr>
+	<tr>
+		<td>Temperature</td>
+		<td>{{context['temp']}} <sup>o</sup>C</td>
+	</tr>
+	<tr>
+		<td>Maximum Temperature</td>
+		<td>{{context['max_temp']}} <sup>o</sup>C</td>
+	</tr>
+	<tr>
+		<td>Minimum Temperature</td>
+		<td>{{context['min_temp']}} <sup>o</sup>C</td>
+	</tr>
+</table>
+{% endblock %}

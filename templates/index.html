@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %} Weather Report - Home {% endblock %} 
+
+{% block content %} 
+<h1>Welcome to the Weather Report</h1>
+<form method="GET">
+	Enter the location : <input type="text" name="place"><br>
+	Get Data From : <input type="date" name="date_start" /> To : <input type="date" name="date_end"><br>
+	<input type="submit" name="btnSubmit" value="Get Weather Details" class="btn btn-primary">
+	<input type="submit" name="btnSave" value="Save Data" class="btn btn-success">
+</form>
+<a href="/saved">View Saved Temperature Records</a>
+{% endblock %}
