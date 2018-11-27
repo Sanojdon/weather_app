@@ -35,8 +35,8 @@ def index():
 		dend = request.args.get('date_end')
 		if place is not None:
 			r = result(place)
-		if(dfro is not None and dend is not None):
-			r = result(place,dfro,dend)
+			if(dfro is not '' and dend is not ''):
+				r = result(place,dfro,dend)
 
 			context = dict()
 			context['city'] = r['city']
@@ -46,6 +46,8 @@ def index():
 			context['pressure'] = r['pres']
 
 			if request.args.get('btnSave') is not None:
+				if dend == '':
+					dend = None
 				record = Record(context['city'], context['temp'], context['max_temp'], context['min_temp'], context['pressure'], dend)
 				db.session.add(record)
 				db.session.commit()
