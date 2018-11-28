@@ -2,7 +2,21 @@
 
 {% block title %} Weather Report - Home {% endblock %} 
 
-{% block content %} 
+{% block content %}
+{% if error != 0: %}
+<div class="alert alert-danger">
+  <strong>Bad Request!!</strong> 
+  <p>The possible issues may be:</p>
+  <ul>
+  	<li>Connectivity issue. Please check your internet connectivity!</li>
+  	<li>Trying to access temperature data of more than a day. The current API key supports only one day history.</li>
+  	<li>The place that you search for might not be provided by the API.</li>
+  </ul>
+  
+</div>
+{% endif %}
+
+
 <h1>Welcome to the Weather Report</h1>
 <form method="GET">
 	Enter the location : <input type="text" name="place"><br>
